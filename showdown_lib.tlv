@@ -694,7 +694,7 @@
       m5+call(team_\m5_my_github_id, /_name, /_secret)
       // Instantiate VIZ macro in devel mode if it exists (using an unofficial test).
       /ship[*]
-         m5_if_eq(m5_viz_mode, devel, ['m4_ifdef(['m4tlv_team_']m5_my_github_id['_viz__body'], ['m5+call(team_\m5_myid['']_github_id['']_viz, /_name, _team_num)'])'])
+         m5_if_eq(m5_viz_mode, devel, ['m4_ifdef(['m4tlv_team_']m5_my_github_id['_viz__body'], ['m5+call(team_']m5_my_github_id['_viz, /_name, _team_num)'])'])
       
 \TLV showdown(/_top, /_secret)
    /// Each team submits a file containing a TLV macro whose name is the GitHub ID matching the
