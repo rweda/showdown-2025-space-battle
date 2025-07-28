@@ -154,7 +154,7 @@
       logic signed [3:0] id['']_github_id['']y_a [m5_SHIP_RANGE];
       logic [1:0] id['']_github_id['']fire_dir [m5_SHIP_RANGE];
       m5_increment(Uniquifier, 1)
-      team_['']_github_id team_['']_github_id['_']m5_Uniquifier(
+      team_['']_github_id team_['']_github_id['_']m5_Uniquifier[''](
          // Inputs:
          .clk(clk),
          .reset(/_top$reset),
