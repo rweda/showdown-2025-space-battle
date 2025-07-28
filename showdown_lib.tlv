@@ -145,47 +145,47 @@
 
 \TLV verilog_wrapper(/_top, _github_id)
    \SV_plus
-      logic signed [7:0] id['']_github_id['']energy [m5_SHIP_RANGE];
-      logic signed [7:0] id['']_github_id['']x [m5_SHIP_RANGE];
-      logic signed [7:0] id['']_github_id['']y [m5_SHIP_RANGE];
-      logic signed [7:0] id['']_github_id['']enemy_x_p [m5_SHIP_RANGE];
-      logic signed [7:0] id['']_github_id['']enemy_y_p [m5_SHIP_RANGE];
-      logic signed [3:0] id['']_github_id['']x_a [m5_SHIP_RANGE];
-      logic signed [3:0] id['']_github_id['']y_a [m5_SHIP_RANGE];
-      logic [1:0] id['']_github_id['']fire_dir [m5_SHIP_RANGE];
       m5_increment(Uniquifier, 1)
+      logic signed [7:0] id['']m5_Uniquifier['']energy [m5_SHIP_RANGE];
+      logic signed [7:0] id['']m5_Uniquifier['']x [m5_SHIP_RANGE];
+      logic signed [7:0] id['']m5_Uniquifier['']y [m5_SHIP_RANGE];
+      logic signed [7:0] id['']m5_Uniquifier['']enemy_x_p [m5_SHIP_RANGE];
+      logic signed [7:0] id['']m5_Uniquifier['']enemy_y_p [m5_SHIP_RANGE];
+      logic signed [3:0] id['']m5_Uniquifier['']x_a [m5_SHIP_RANGE];
+      logic signed [3:0] id['']m5_Uniquifier['']y_a [m5_SHIP_RANGE];
+      logic [1:0] id['']m5_Uniquifier['']fire_dir [m5_SHIP_RANGE];
       team_['']_github_id team_['']_github_id['_']m5_Uniquifier[''](
          // Inputs:
          .clk(clk),
          .reset(/_top$reset),
-         .x(id['']_github_id['']x),
-         .y(id['']_github_id['']y),
-         .energy(id['']_github_id['']energy),
+         .x(id['']m5_Uniquifier['']x),
+         .y(id['']m5_Uniquifier['']y),
+         .energy(id['']m5_Uniquifier['']energy),
          .destroyed(/ship[*]>>1$destroyed),
-         .enemy_x_p(id['']_github_id['']enemy_x_p),
-         .enemy_y_p(id['']_github_id['']enemy_y_p),
+         .enemy_x_p(id['']m5_Uniquifier['']enemy_x_p),
+         .enemy_y_p(id['']m5_Uniquifier['']enemy_y_p),
          .enemy_cloaked(/enemy_ship[*]$cloaked),
          .enemy_destroyed(/enemy_ship[*]$destroyed),
          // Outputs:
-         .x_a(id['']_github_id['']x_a),
-         .y_a(id['']_github_id['']y_a),
+         .x_a(id['']m5_Uniquifier['']x_a),
+         .y_a(id['']m5_Uniquifier['']y_a),
          .attempt_fire(/ship[*]$$attempt_fire),
          .attempt_shield(/ship[*]$$attempt_shield),
          .attempt_cloak(/ship[*]$$attempt_cloak),
-         .fire_dir(id['']_github_id['']fire_dir)
+         .fire_dir(id['']m5_Uniquifier['']fire_dir)
       );
    /enemy_ship[*]
       \SV_plus
-         assign *id['']_github_id['']enemy_x_p[enemy_ship] = $xx_p;
-         assign *id['']_github_id['']enemy_y_p[enemy_ship] = $yy_p;
+         assign *id['']m5_Uniquifier['']enemy_x_p[enemy_ship] = $xx_p;
+         assign *id['']m5_Uniquifier['']enemy_y_p[enemy_ship] = $yy_p;
    /ship[*]
       \SV_plus
-         assign *id['']_github_id['']x[ship] = >>1$xx_p;
-         assign *id['']_github_id['']y[ship] = >>1$yy_p;
-         assign *id['']_github_id['']energy[ship] = >>1$energy;
-         assign $$xx_acc[3:0] = *id['']_github_id['']x_a[ship];
-         assign $$yy_acc[3:0] = *id['']_github_id['']y_a[ship];
-         assign $$fire_dir[1:0] = *id['']_github_id['']fire_dir[ship];
+         assign *id['']m5_Uniquifier['']x[ship] = >>1$xx_p;
+         assign *id['']m5_Uniquifier['']y[ship] = >>1$yy_p;
+         assign *id['']m5_Uniquifier['']energy[ship] = >>1$energy;
+         assign $$xx_acc[3:0] = *id['']m5_Uniquifier['']x_a[ship];
+         assign $$yy_acc[3:0] = *id['']m5_Uniquifier['']y_a[ship];
+         assign $$fire_dir[1:0] = *id['']m5_Uniquifier['']fire_dir[ship];
       //$xx_acc[3:0] = /_top$xx_acc_vect[4 * (ship + 1) - 1 : 4 * ship];
       //$yy_acc[3:0] = /_top$yy_acc_vect[4 * (ship + 1) - 1 : 4 * ship];
       //$fire_dir[1:0] = /_top$fire_dir_vect[2 * (ship + 1) - 1 : 2 * ship];
