@@ -27,7 +27,7 @@
    /    $fire_dir[1:0]: Direction to fire (if firing). (For the first player: 0 = right, 1 = down, 2 = left, 3 = up).
    /    $attempt_cloak: Attempted actions for each of your ships (if sufficient energy remains).
    /    $attempt_shield: Attempt to use shields (if sufficient energy remains).
-   / Based on the following inputs, previous state from the enemy in /prev_enemy_ship[2:0]:
+   / Based on the following inputs, including state from the enemy in /_top/enemy_ship[2:0] (as updated by previous-cycle outputs):
    / /ship[2:0]
    /    *clk:           Clock; used implicitly by TL-Verilog constructs, but you can use this in embedded Verilog.
    /    $reset:         Reset.
