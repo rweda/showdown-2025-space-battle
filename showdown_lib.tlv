@@ -139,6 +139,8 @@
 
    macro(DefaultTeamVizBoxAndWhere, ['box: {width: 210, height: 105, left: -55, top: -2.5, strokeWidth: 0}, where: {left: 0, top: 0, width: 80, height: 120},'])
    
+   var(Uniquifier, 0)   /// Used to provide unique names.
+
 // --------------- For the Verilog template ---------------
 
 \TLV verilog_wrapper(/_top, _github_id)
@@ -151,7 +153,8 @@
       logic signed [3:0] id['']_github_id['']x_a [m5_SHIP_RANGE];
       logic signed [3:0] id['']_github_id['']y_a [m5_SHIP_RANGE];
       logic [1:0] id['']_github_id['']fire_dir [m5_SHIP_RANGE];
-      team_['']_github_id team_['']_github_id(
+      m5_increment(Uniquifier, 1)
+      team_['']_github_id team_['']_github_id['_']m5_Uniquifier(
          // Inputs:
          .clk(clk),
          .reset(/_top$reset),
