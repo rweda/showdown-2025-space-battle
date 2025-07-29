@@ -42,13 +42,13 @@
    / ++++++++++ End of Contest Parameters ++++++++++++
    
    / VIZ config
-   / viz_mode can be set before including this library.
+   / VIZ_mode can be set before including this library.
    /   devel: [default] for development
    /   demo: optimized for demonstration
-   if_var_ndef(viz_mode, [
-      var(viz_mode, devel)
+   if_var_ndef(VIZ_mode, [
+      var(VIZ_mode, devel)
    ])
-   case(viz_mode, devel, [
+   case(VIZ_mode, devel, [
       var(show_hit_boxes, true)
       var(default_anim_duration, 250)
       var(early_turns, 0)
@@ -697,7 +697,7 @@
       m5+call(team_\m5_my_github_id, /_name, /_secret)
       // Instantiate VIZ macro in devel mode if it exists (using an unofficial test).
       /ship[*]
-         m5_if_eq(m5_viz_mode, devel, ['m4_ifdef(['m4tlv_team_']m5_my_github_id['_viz__body'], ['m5+call(team_']m5_my_github_id['_viz, /_name, _team_num)'])'])
+         m5_if_eq(m5_VIZ_mode, devel, ['m4_ifdef(['m4tlv_team_']m5_my_github_id['_viz__body'], ['m5+call(team_']m5_my_github_id['_viz, /_name, _team_num)'])'])
       
 \TLV showdown(/_top, /_secret)
    /// Each team submits a file containing a TLV macro whose name is the GitHub ID matching the
