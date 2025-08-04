@@ -8,6 +8,21 @@ In each match, your fleet of three ships battles another. You design the control
 
 ![Watch video](screencapture.gif)
 
+## Results Are In
+
+Congratulations to the winners:
+
+- 1st Place: F4: Kiruthika Vajjiravelu, Swarnalalitha Amarnath, Medha D, Anjana Narayan Rao
+- 1st Place: VeriFast: Jacobo Morales Erazo, Gabriela Villalba Vélez, Juan David Garavito Coronado
+- 3rd Place: fleetRON: Vidula Balamurugan, Srinisha S, Vignesh M, Sundaram V
+- 3rd Place: Bionic Beavers: Aria Mitra, Zimeng Xiong, Jack Albers, Lea Christensen, Hannah Wang, Alex Mazurczyk, Sanjitha Manivelan
+
+Watch the [full event recording](https://youtu.be/tqKqlIbU4Uo).
+
+Replay the contest in Makerchip:
+- [Full Showdown, all battles at once](https://makerchip.com/sandbox?code_url=https%3A%2F%2Fraw.githubusercontent.com%2Frweda%2Fshowdown-2025-space-battle%2F64b01360e1e75e9aa79041610d314ceb508fee3e%2Fshowdown_results.tlv#)
+- [Individual battles](https://makerchip.com/sandbox?code_url=https%3A%2F%2Fraw.githubusercontent.com%2Frweda%2Fshowdown-2025-space-battle%2F64b01360e1e75e9aa79041610d314ceb508fee3e%2Fshowdown_event.tlv#)
+
 ## Rules of Combat
 
 Your three ships can:
